@@ -1,0 +1,89 @@
+.Personality:hover .PersonalityImage img {
+    transform: scale(1.1) translateX(-2px);
+    border: 5px solid white; /* Add a white border */
+    border-radius: 10px; /* Optional: Add border radius for a rounded border */
+}
+
+/* Define transition for all image elements */
+.Personality .PersonalityImage img {
+    transition: transform 0.3s ease;
+}
+
+
+.Home {position: absolute; top: 500px; left: 50%; transform: translate(-50%, -50%);}
+.Press {position: absolute; top: 910px; left: 49.5%; transform: translate(-50%, -50%);}
+
+.MiniHome {position: absolute; top: -20px; left: -1%; padding: 20px;}
+#ArrowLeft {position: absolute; top: 20px; left: 96.5%;}
+.Text01 {position: absolute; top: 10%; left: 50%; font-weight: bold; font-size: 45px; font-family: 'Canva Sans', sans-serif; transform: translate(-50%, -50%); color: rgb(255, 255, 255);}
+
+.Architect {position: absolute; top: 290px; left: 35.5%; transform: translate(-50%, -50%);}
+.Adventurer {position: absolute; top: 457px; left: 35.5%; transform: translate(-50%, -50%);}
+.Advocate {position: absolute; top: 624px; left: 35.5%; transform: translate(-50%, -50%);}
+.Logistian {position: absolute; top: 790px; left: 35.5%; transform: translate(-50%, -50%);}
+
+.Debater {position: absolute; top: 290px; left: 45.5%; transform: translate(-50%, -50%);}
+.Entertainer {position: absolute; top: 457px; left: 45.5%; transform: translate(-50%, -50%);}
+.Mediator {position: absolute; top: 624px; left: 45.5%; transform: translate(-50%, -50%);}
+.Defender {position: absolute; top: 790px; left: 45.5%; transform: translate(-50%, -50%);}
+
+.Logician {position: absolute; top: 290px; left: 55.5%; transform: translate(-50%, -50%);}
+.Entrepreneur {position: absolute; top: 457px; left: 55.5%; transform: translate(-50%, -50%);}
+.Protagonist {position: absolute; top: 624px; left: 55.5%; transform: translate(-50%, -50%);}
+.Executive {position: absolute; top: 790px; left: 55.5%; transform: translate(-50%, -50%);}
+
+.Commander {position: absolute; top: 290px; left: 65.5%; transform: translate(-50%, -50%);}
+.Virtuoso {position: absolute; top: 457px; left: 65.5%; transform: translate(-50%, -50%);}
+.Campaigner {position: absolute; top: 624px; left: 65.5%; transform: translate(-50%, -50%);}
+.Consul {position: absolute; top: 790px; left: 65.5%; transform: translate(-50%, -50%);}
+
+/* Define transition for all elements */
+.Architect img,
+.Adventurer img,
+.Advocate img,
+.Logistian img,
+.Debater img,
+.Entertainer img,
+.Mediator img,
+.Defender img,
+.Logician img,
+.Entrepreneur img,
+.Protagonist img,
+.Executive img,
+.Commander img,
+.Virtuoso img,
+.Campaigner img,
+.Consul img,
+.Text01 {
+    transition: transform 0.3s ease;
+}
+
+/* Apply hover effect to all elements */
+.Architect img:hover,
+.Adventurer img:hover,
+.Advocate img:hover,
+.Logistian img:hover,
+.Debater img:hover,
+.Entertainer img:hover,
+.Mediator img:hover,
+.Defender img:hover,
+.Logician img:hover,
+.Entrepreneur img:hover,
+.Protagonist img:hover,
+.Executive img:hover,
+.Commander img:hover,
+.Virtuoso img:hover,
+.Campaigner img:hover,
+.Consul img:hover {
+    transform: scale(1.1) translateX(-2px);
+}
+
+
+.selectedImage {
+    border: 2px solid white; /* Add a white border around the selected image */
+    width: 132px; /* Set the width to match the image width */
+    height: 154px; /* Set the height to match the image height */
+    margin: 10px auto; /* Center the container horizontally */
+    display: none; /* Hide the container by default */
+}
+

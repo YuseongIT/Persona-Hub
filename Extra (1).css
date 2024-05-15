@@ -1,0 +1,180 @@
+.PersonalityImage {
+    padding: 2px; /* Add padding to reduce the hover area */
+}
+
+.PersonalityImage img {
+    border: 5px solid transparent; /* Initially set the border to transparent */
+    border-radius: 10px; /* Optional: Add border radius for a rounded corner effect */
+}
+
+/* Apply hover effect to all elements */
+.PersonalityImage img:hover {
+    transform: scale(1.1) translateX(-2px);
+    border-color: white; /* Set the border color to white on hover */
+}
+
+/* Your existing CSS */
+.Home {position: absolute; top: 380px; left: 50%; transform: translate(-50%, -50%);}
+.Press {position: absolute; top: 790px; left: 50.5%; transform: translate(-50%, -50%);}
+
+.MiniHome {position: absolute; top: -20px; left: -1%; padding: 20px;}
+#ArrowLeft {position: absolute; top: 20px; left: 96.5%;}
+.Text01 {position: absolute; top: 10%; left: 50%; font-weight: bold; font-size: 45px; font-family: 'Canva Sans', sans-serif; transform: translate(-50%, -50%); color: rgb(255, 255, 255);}
+
+.Architect {position: absolute; top: 290px; left: 35.5%; transform: translate(-50%, -50%);}
+.Adventurer {position: absolute; top: 457px; left: 35.5%; transform: translate(-50%, -50%);}
+.Advocate {position: absolute; top: 624px; left: 35.5%; transform: translate(-50%, -50%);}
+.Logistian {position: absolute; top: 790px; left: 35.5%; transform: translate(-50%, -50%);}
+
+.Debater {position: absolute; top: 290px; left: 45.5%; transform: translate(-50%, -50%);}
+.Entertainer {position: absolute; top: 457px; left: 45.5%; transform: translate(-50%, -50%);}
+.Mediator {position: absolute; top: 624px; left: 45.5%; transform: translate(-50%, -50%);}
+.Defender {position: absolute; top: 790px; left: 45.5%; transform: translate(-50%, -50%);}
+
+.Logician {position: absolute; top: 290px; left: 55.5%; transform: translate(-50%, -50%);}
+.Entrepreneur {position: absolute; top: 457px; left: 55.5%; transform: translate(-50%, -50%);}
+.Protagonist {position: absolute; top: 624px; left: 55.5%; transform: translate(-50%, -50%);}
+.Executive {position: absolute; top: 790px; left: 55.5%; transform: translate(-50%, -50%);}
+
+.Commander {position: absolute; top: 290px; left: 65.5%; transform: translate(-50%, -50%);}
+.Virtuso {position: absolute; top: 457px; left: 65.5%; transform: translate(-50%, -50%);}
+.Campaigner {position: absolute; top: 624px; left: 65.5%; transform: translate(-50%, -50%);}
+.Consul {position: absolute; top: 790px; left: 65.5%; transform: translate(-50%, -50%);}
+
+/* Define transition for all elements */
+.Architect img,
+.Adventurer img,
+.Advocate img,
+.Logistian img,
+.Debater img,
+.Entertainer img,
+.Mediator img,
+.Defender img,
+.Logician img,
+.Entrepreneur img,
+.Protagonist img,
+.Executive img,
+.Commander img,
+.Virtuso img,
+.Campaigner img,
+.Consul img,
+.Text01 {
+    transition: transform 0.3s ease;
+}
+
+/* Apply hover effect to all elements */
+.Architect img:hover,
+.Adventurer img:hover,
+.Advocate img:hover,
+.Logistian img:hover,
+.Debater img:hover,
+.Entertainer img:hover,
+.Mediator img:hover,
+.Defender img:hover,
+.Logician img:hover,
+.Entrepreneur img:hover,
+.Protagonist img:hover,
+.Executive img:hover,
+.Commander img:hover,
+.Virtuso img:hover,
+.Campaigner img:hover,
+.Consul img:hover {
+    transform: scale(1.1) translateX(-2px);
+}
+
+/* CSS for moving elements to the left */
+.moved-left .Architect img {
+    transform: translateX(-330%);
+    transition: transform 0.3s ease; /* Add transition for smooth movement */
+}
+
+.moved-left .Adventurer img {
+    transform: translateX(-326%);
+    transition: transform 0.3s ease; /* Add transition for smooth movement */
+}
+
+.moved-left .Advocate img {
+    transform: translateX(-326%);
+    transition: transform 0.3s ease; /* Add transition for smooth movement */
+}
+
+.moved-left .Logistian img {
+    transform: translateX(-329%);
+    transition: transform 0.3s ease; /* Add transition for smooth movement */
+}
+
+.moved-left .Debater img {
+    transform: translateX(-320%);
+    transition: transform 0.3s ease; /* Add transition for smooth movement */
+}
+
+.moved-left .Entertainer img {
+    transform: translateX(-318%);
+    transition: transform 0.3s ease; /* Add transition for smooth movement */
+}
+
+.moved-left .Mediator img {
+    transform: translateX(-318%);
+    transition: transform 0.3s ease; /* Add transition for smooth movement */
+}
+
+.moved-left .Defender img {
+    transform: translateX(-318%);
+    transition: transform 0.3s ease; /* Add transition for smooth movement */
+}
+
+.moved-left .Logician img {
+    transform: translateX(-320%);
+    transition: transform 0.3s ease; /* Add transition for smooth movement */
+}
+
+.moved-left .Entrepreneur img {
+    transform: translateX(-318%);
+    transition: transform 0.3s ease; /* Add transition for smooth movement */
+}
+
+.moved-left .Protagonist img {
+    transform: translateX(-318%);
+    transition: transform 0.3s ease; /* Add transition for smooth movement */
+}
+
+.moved-left .Executive img {
+    transform: translateX(-317.5%);
+    transition: transform 0.3s ease; /* Add transition for smooth movement */
+}
+
+.moved-left .Commander img {
+    transform: translateX(-305.5%);
+    transition: transform 0.3s ease; /* Add transition for smooth movement */
+}
+
+.moved-left .Virtuso img {
+    transform: translateX(-305%);
+    transition: transform 0.3s ease; /* Add transition for smooth movement */
+}
+
+.moved-left .Campaigner img {
+    transform: translateX(-305%);
+    transition: transform 0.3s ease; /* Add transition for smooth movement */
+}
+
+.moved-left .Consul img {
+    transform: translateX(-302.8%);
+    transition: transform 0.3s ease; /* Add transition for smooth movement */
+}
+
+#RightImage {
+    position: absolute;
+    top: 47.5%;
+    right: 1%; /* Adjust position as needed */
+    transform: translate(-50%, -50%);
+    display: none; /* Initially hidden */
+}
+
+#Select {
+    position: absolute;
+    top: 85%;
+    right: 14.6%; /* Adjust position as needed */
+    transform: translateY(-50%); /* Vertical centering */
+    display: none; /* Initially hidden */
+}

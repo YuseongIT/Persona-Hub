@@ -1,0 +1,173 @@
+.S2_Menu_img {
+    cursor: pointer;
+    position: absolute; /* Position the image absolutely */
+    top: -5px; /* Align the image to the top */
+    left: 10px; /* Align the image to the left */
+    margin-top: 10px; /* Adjust top margin as needed */
+    z-index: 2; /* Ensure the image appears on top of other elements */
+}
+
+.S1_Menu_list {
+    display: none;
+    position: absolute;
+    top: 10%;
+    left: 5%; /* Adjusted to align with BurgBar */
+    transform: translateX(-50%) translateY(-10px);
+    background-color: #bfa9e4;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-top: none;
+    z-index: 1;
+    list-style-type: none;
+    margin: 0;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.S1_Menu_list_item a {
+    text-decoration: none;
+    color: #333;
+    font-size: 25px;
+    transition: color 0.3s, font-size 0.3s;
+}
+
+.S1_Menu_list_item:hover {
+    background-color: #040720;
+}
+
+.S1_Menu_list_item:hover a {
+    color: #ffffff;
+    font-size: 30px;
+}
+
+.S1_Menu_img {
+    cursor: pointer;
+    position: absolute;
+    top: 3px;
+    left: 94%;
+    margin-top: 10px;
+    z-index: 2;
+}
+
+.sidenav {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    z-index: 999; /* Ensure it appears above other elements */
+    top: 0;
+    right: 0; /* Adjusted to align with BurgBar */
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    display: none; /* Initially hide */
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 35px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+    position: relative; /* Add relative positioning */
+}
+
+/* Add box shadow on link hover */
+.sidenav a:hover {
+    color: #f1f1f1;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Create background layer for link container */
+.sidenav a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    transition: background-color 0.3s; /* Smooth transition */
+    z-index: -1; /* Place it behind the link text */
+}
+
+/* Change background color of link container on hover */
+.sidenav a:hover::before {
+    background-color: #27242B;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+.custom-nav {
+    font-family: 'Canva Sans', Arial, sans-serif;
+    background-color: #403F56;
+    width: 100vw; /* Use viewport width */
+    margin: 0; /* Remove default margin */
+    padding: 15px; /* Remove default padding */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999; /* Ensure it appears above other elements */
+}
+
+.custom-list {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0px;
+}
+
+.custom-list-item {
+    margin-right: 65px;
+    margin-left: 165px;
+}
+
+.custom-list-item:last-child {
+    margin-right: 0;
+}
+
+.custom-link {
+    text-decoration: none;
+    color: #fff;
+    font-size: 30px; /* Adjust font size as needed */
+    padding: 16px 15px; /* Adjust padding as needed */
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.custom-link:hover {
+    background-color: #5C2BAD;
+}
+
+.hidden-nav {
+    transform: translateY(-100%);
+}
+
+#mySidenav {
+    width: 0;
+    position: fixed;
+    right: 0; /* Position on the right side */
+    top: 0; /* Align to the top */
+    height: 100%; /* Set height to cover the entire screen */
+    background-color: #704ca8;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.close-button {
+    font-size: 90px;
+    position: absolute;
+    top: -20px;
+    right: 35px;
+    cursor: pointer;
+    color: white;
+    z-index: 1; /* Ensure it appears above other content */
+}
+
+.close-button:hover {
+    color: rgb(0, 0, 0); /* Change color on hover if needed */
+}

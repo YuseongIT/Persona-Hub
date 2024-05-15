@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="NavBars.css">
+<link rel="stylesheet" href="Other.css">
+</head>
+<body>
+
+  <body>
+
+    <nav class="custom-nav">
+        <div class="S2_Menu_img">
+            <a href="Index.html">
+                <img src="Assets/Images/NavHome_Logo.png" alt="Navigation Image" style="width: 100px; height: 60px;">
+            </a>
+        </div>
+        <ul class="custom-list">
+            <li class="custom-list-item"><a class="custom-link" href="Personalities.html">Personalities</a></li>
+            <li class="custom-list-item"><a class="custom-link" href="Article.html">Articles and Trends</a></li>
+            <li class="custom-list-item"><a class="custom-link" href="Other.html">Other Resources</a></li>
+            <li class="custom-list-item"><a class="custom-link" href="AboutUs.html">About Us</a></li>
+        </ul>
+        <div class="S1_Menu_img" onclick="toggleNav()">
+            <img src="Assets/Images/BurgBar.png" alt="Navigation Image" style="width: 50px; height: 40px;">
+        </div>
+    </nav>
+
+    <div id="mySidenav" class="sidenav" style="display: block;">
+        <a href="Personalities.html">Personalities</a>
+        <a href="Type.html">Type</a>
+        <a href="Skills.html">Skills</a>
+        <a href="Preffer.html">Preferred Builds</a>
+        <a href="Friends.html">Friends & Relations</a>
+        <a href="Conclusion.html">Conclusion</a>
+        <span class="close-button" onclick="closeNav()">&times;</span>
+    </div>  
+
+<div class="ThankYou">
+  <br>
+  <p>Thank You, here's some sources about the Personality.</p>
+</div>
+
+<div class="Clickthe">
+  <p>Click the Image below:</p>
+</div>
+
+<div class="container">
+  <a href="https://www.verywellmind.com/what-is-personality-2795416" target="_blank">
+    <div class="image-box">
+      <img src="Assets/Images/U1.png" alt="Avatar" class="image" style="width: 100%; height: 80%;">
+      <div class="overlay">
+        <div class="text">Personality: Definition, Theories, Traits, & Types</div>
+      </div>
+    </div>
+  </a>
+</div>
+<br>
+<div class="container">
+  <a href="https://neurosciencenews.com/dispositional-intelligence-personality-20506/" target="_blank">
+    <div class="image-box">
+      <img src="Assets/Images/I1.jpg" alt="Avatar" class="image" style="width: 100%; height: 90%;">
+      <div class="overlay">
+        <div class="text">Impact of College Personality Course on Personality Understanding</div>
+      </div>
+    </div>
+  </a>
+</div>
+<br>
+<div class="container">
+  <a href="https://umbrella.org.nz/can-i-change-my-personality/" target="_blank">
+    <div class="image-box">
+      <img src="Assets/Images/O1.jpg" alt="Avatar" class="image" style="width: 100%; height: 40%;">
+      <div class="overlay" id="overlay">
+        <div class="text">Can I change my personality?</div>
+      </div>
+    </div>
+  </a>
+</div>
+<br>
+<div class="container">
+  <a href="https://www.fastweb.com/student-news/articles/most-common-personality-types-you-ll-meet-in-college" target="_blank">
+    <div class="image-box">
+      <img src="Assets/Images/P1.png" alt="Avatar" class="image" style="width: 100%; height: 90%;">
+      <div class="overlay" id="overlay">
+        <div class="text">Most Common Personality Types You’ll Meet in College</div>
+      </div>
+    </div>
+  </a>
+</div>
+<br>
+<div class="container">
+  <a href="https://www.discovermagazine.com/mind/the-problem-with-the-myers-briggs-personality-test" target="_blank">
+    <div class="image-box" onmouseenter="handleMouseEnter(event)" onmouseleave="handleMouseLeave(event)">
+      <img src="Assets/Images/G1.png" alt="Avatar" class="image">
+      <div class="overlay" id="overlay">
+        <div class="text">What Is MBTI: Is the Myers-Briggs Test Still Valid?</div>
+      </div>
+    </div>
+  </a>
+</div>
+<br>
+<div class="container">
+  <a href="https://www.thecoolist.com/personality/types/" target="_blank">
+    <div class="image-box" onmouseenter="handleMouseEnter(event)" onmouseleave="handleMouseLeave(event)">
+      <img src="Assets/Images/F1.png" alt="Avatar" class="image">
+      <div class="overlay" id="overlay">
+        <div class="text">16 Different Personality Types: Behaviors, Characteristics, Social Skills</div>
+      </div>
+    </div>
+  </a>
+</div>
+<br>
+<div class="container">
+  <a href="https://theempathycentre.com/2022/08/21/personality-disorders/" target="_blank">
+    <div class="image-box" onmouseenter="handleMouseEnter(event)" onmouseleave="handleMouseLeave(event)">
+      <img src="Assets/Images/R1.png" alt="Avatar" class="image">
+      <div class="overlay" id="overlay">
+        <div class="text">Personality Disorders</div>
+      </div>
+    </div>
+  </a>
+</div>
+<br>
+<div class="container">
+  <a href="https://www.npr.org/sections/health-shots/2016/06/30/484053435/personality-can-change-over-a-lifetime-and-usually-for-the-better" target="_blank">
+    <div class="image-box" onmouseenter="handleMouseEnter(event)" onmouseleave="handleMouseLeave(event)">
+      <img src="Assets/Images/M1.png" alt="Avatar" class="image">
+      <div class="overlay" id="overlay">
+        <div class="text">Personality Can Change Over A Lifetime, And Usually For The Better</div>
+      </div>
+    </div>
+  </a>
+</div>
+<br>
+<div class="container">
+  <a href="https://insight.kellogg.northwestern.edu/article/how-personality-shapes-investment-portfolio" target="_blank">
+    <div class="image-box" onmouseenter="handleMouseEnter(event)" onmouseleave="handleMouseLeave(event)">
+      <img src="Assets/Images/Z1.png" alt="Avatar" class="image">
+      <div class="overlay" id="overlay">
+        <div class="text">How Your Personality Shapes Your Portfolio</div>
+      </div>
+    </div>
+  </a>
+</div>
+<br>
+<div class="container">
+  <a href="https://personalitytests.com/personality-types-a-b-c-d/" target="_blank">
+    <div class="image-box" onmouseenter="handleMouseEnter(event)" onmouseleave="handleMouseLeave(event)">
+      <img src="Assets/Images/B1.png" alt="Avatar" class="image">
+      <div class="overlay" id="overlay">
+        <div class="text">How Your Personality Shapes Your Portfolio</div>
+      </div>
+    </div>
+  </a>
+</div>
+<br>
+<div class="container">
+  <a href="https://www.thomas.co/resources/type/hr-guides/what-are-big-5-personality-traits" target="_blank">
+    <div class="image-box" onmouseenter="handleMouseEnter(event)" onmouseleave="handleMouseLeave(event)">
+      <img src="Assets/Images/D1.png" alt="Avatar" class="image">
+      <div class="overlay" id="overlay">
+        <div class="text">What Are The Big 5 Personality Traits?</div>
+      </div>
+    </div>
+  </a>
+</div>
+
+<script src="NavBear.js"></script>
+</body>
+</html>

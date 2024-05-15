@@ -1,0 +1,78 @@
+#selectedImage img {
+    height: auto; /* Reset the height to allow the image to adjust proportionally */
+    max-width: 100%; /* Ensure the image does not exceed its container's width */
+    position: relative; /* Set position to relative */
+    top: 2%; /* Adjust the vertical position */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+h1 {
+    color: rgb(0, 0, 0);
+    text-align: justify;
+}
+
+.square {
+    width: 80px;
+    height: 80px;
+    border: 2px solid #fff;
+    margin: -50px auto -110px; /* Adjusting the margin-top to move the element upwards */
+    display: inline-block;
+}
+
+
+.info {
+    margin-left: 50%;
+    margin-top: -40%; /* Adjusting the margin-top to move the element upwards */
+}
+
+
+input[type="Alent"]{
+	display: block;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+input[type="Slent"]{
+	display: block;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+input[type="Dlent"]{
+	display: block;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+input[type="Flent"]{
+	display: block;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+input[type="Glent"]{
+	display: block;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+input[type="Hlent"]{
+	display: block;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+input[type="Alent"],
+input[type="Slent"],
+input[type="Dlent"],
+input[type="Flent"],
+input[type="Glent"],
+input[type="Hlent"] {
+    width: 600px;
+    height: 20px;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+}

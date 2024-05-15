@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PersonaHub</title>
+    <link rel="stylesheet" href="Typing.css">
+    <link rel="stylesheet" href="NavBars.css">
+</head>
+
+<body style="background: url('Assets/Images/MainBackground.png') center top no-repeat, #bfa9e4;">
+
+    <nav class="custom-nav">
+        <div class="S2_Menu_img">
+            <a href="Index.html">
+                <img src="Assets/Images/NavHome_Logo.png" alt="Navigation Image" style="width: 100px; height: 60px;">
+            </a>
+        </div>
+        <ul class="custom-list">
+            <li class="custom-list-item"><a class="custom-link" href="Personalities.html">Personalities</a></li>
+            <li class="custom-list-item"><a class="custom-link" href="Article.html">Articles and Trends</a></li>
+            <li class="custom-list-item"><a class="custom-link" href="Other.html">Other Resources</a></li>
+            <li class="custom-list-item"><a class="custom-link" href="AboutUs.html">About Us</a></li>
+        </ul>
+        <div class="S1_Menu_img" onclick="toggleNav()">
+            <img src="Assets/Images/BurgBar.png" alt="Navigation Image" style="width: 50px; height: 40px;">
+        </div>
+    </nav>
+
+    <div id="mySidenav" class="sidenav" style="display: block;">
+        <a href="Personalities.html">Personalities</a>
+        <a href="Type.html">Type</a>
+        <a href="Skills.html">Skills</a>
+        <a href="Preffer.html">Preferred Builds</a>
+        <a href="Friends.html">Friends & Relations</a>
+        <a href="Conclusion.html">Conclusion</a>
+        <span class="close-button" onclick="closeNav()">&times;</span>
+    </div>
+
+    <script src="NavBear.js"></script>
+
+    <div id="selectedImage">
+        <img src="" alt="Selected Image">
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const queryString = window.location.search;
+            const urlParams = new URLSearchParams(queryString);
+            const selectedImageSrc = urlParams.get('selectedImage');
+
+            if (selectedImageSrc) {
+                const selectedImage = document.querySelector('#selectedImage img');
+                selectedImage.src = decodeURIComponent(selectedImageSrc);
+            } else {
+                console.error('No image selected.');
+            }
+
+            // Retrieve the selected image URL from local storage
+            const localSelectedImageSrc = localStorage.getItem('selectedImage');
+    
+            if (localSelectedImageSrc) {
+                // Set the source of the selected image
+                const selectedImage = document.querySelector('#selectedImage img');
+                selectedImage.src = localSelectedImageSrc;
+            } else {
+                console.error('No image selected.');
+            }
+
+            // Add event listener to navigate to Skills.html
+            document.getElementById('Select').addEventListener('click', function() {
+                window.location.href = 'Skills.html';
+            });
+        });
+    </script>
+
+    <a id="Select" href="Type.html"></a>
+
+    <div class="info">
+        <h1>Best with:</h1>
+        <ul id="strengths">
+            <li><img src="Assets/Images/Common.png" class="strength-img" onclick="showInfo('strength1')"></li>
+            <li><img src="Assets/Images/Compa.png" class="strength-img" onclick="showInfo('strength2')"></li>
+            <li><img src="Assets/Images/Dyna.png" class="strength-img" onclick="showInfo('strength3')"></li>
+        </ul>
+        <div id="strength1-info" class="info-box hidden">
+            <b class="Stext">Common Unity</b>
+            <p class="Ftext">Personalities are best known for being loyal, supportive friends, especially types like ISFPs, ESFPs, ESFJs, ISFJs, and INFJs who prioritize relationships and emotional support.</p>
+        </div>
+        <div id="strength2-info" class="info-box hidden">
+            <b class="Stext">Compassionate</b>
+            <p class="Ftext">Compassionate collaborators who empathize, support and cooperate, creating a friendly, approachable dynamic. Flexible, patient and diplomatic communicators who remain humble and trusting, fostering positive relationships.</p>
+        </div>
+        <div id="strength3-info" class="info-box hidden">
+            <b class="Stext">Dynamic</b>
+            <p class="Ftext">Dynamic leaders who are assertive, strategic, and creative, driving results with decisiveness, analytical thinking, and innovative problem-solving.</p>
+        </div>
+        <br></br>
+    
+        <h1>Needs work:</h1>
+        <ul id="weak">
+            <li><img src="Assets/Images/Thri.png" class="strength-img" onclick="showInfo('weakness1')"></li>
+            <li><img src="Assets/Images/NEED.png" class="strength-img" onclick="showInfo('weakness2')"></li>
+            <li><img src="Assets/Images/Pez.png" class="strength-img" onclick="showInfo('weakness3')"></li>
+        </ul>
+        <div id="weakness1-info" class="info-box hidden">
+            <b class="Stext">Thriving Together</b>
+            <p class="Ftext">Embracing encapsulates the essence of fostering a harmonious and productive work environment. By valuing teamwork, encouraging open communication, and nurturing individual and collective growth, this approach cultivates a culture of collaboration where success is achieved through shared efforts and continuous development.</p>
+        </div>
+        <div id="weakness2-info" class="info-box hidden">
+            <b class="Stext">Team Potential</b>
+            <p class="Ftext">Adapting to Diverse Personalities" emphasizes the importance of understanding and adapting to the unique traits and needs of team members. By recognizing and embracing diversity, teams can unlock their full potential, foster a supportive environment, and achieve greater success through collaborative efforts.</p>
+        </div>
+        <div id="weakness3-info" class="info-box hidden">
+            <b class="Stext">Harmonious Collaboration</b>
+            <p class="Ftext">Highlights the significance of working together seamlessly towards a common goal. By fostering a culture of cooperation, effective communication, and mutual respect, teams can navigate challenges, leverage diverse strengths, and achieve remarkable success through unified efforts.</p>
+        </div>
+        <br></br>
+
+    </div>
+
+    <div class="Back">
+        <a href="Type.html">
+            <img id="backButton" src="Assets/Images/BackButton_Logo.png" alt="Go Back">
+        </a>
+    </div>
+
+    <div class="Next">
+        <a href="Preffer.html">
+            <img id="nextButton" src="Assets/Images/NextButton_Logo.png" alt="Go Next">
+        </a>
+    </div>
+    <script>
+function showInfo(id) {
+        var infoBoxes = document.querySelectorAll('.info-box'); 
+        infoBoxes.forEach(function(box) { 
+            box.style.display = "none"; 
+        });
+
+        var infoBox = document.getElementById(id + "-info"); 
+        if (infoBox.style.display === "none") {
+            infoBox.style.display = "block";
+        } else {
+            infoBox.style.display = "none";
+        }
+    }
+    function showInfo(id) {
+        var infoBox = document.getElementById(id + "-info");
+
+        var isVisible = window.getComputedStyle(infoBox).getPropertyValue("display") === "block";
+
+        var infoBoxes = document.querySelectorAll('.info-box');
+        infoBoxes.forEach(function(box) {
+            box.style.display = "none";
+        });
+
+        if (!isVisible) {
+            infoBox.style.display = "block";
+        }
+    }
+    </script>
+</body>
+</html>

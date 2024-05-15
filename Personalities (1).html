@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hyperlink</title>
+    <link rel="stylesheet" href="Personality.css">
+    <link rel="stylesheet" href="NavBars.css">
+</head>
+
+<body style="background: url('Assets/Images/MainBackground.png') center top no-repeat, #bfa9e4;">
+
+    <nav class="custom-nav">
+        <div class="S2_Menu_img">
+            <a href="Index.html">
+                <img src="Assets/Images/NavHome_Logo.png" alt="Navigation Image" style="width: 100px; height: 60px;">
+            </a>
+        </div>
+        <ul class="custom-list">
+            <li class="custom-list-item"><a class="custom-link" href="Personalities.html">Personalities</a></li>
+            <li class="custom-list-item"><a class="custom-link" href="Article.html">Articles and Trends</a></li>
+            <li class="custom-list-item"><a class="custom-link" href="Other.html">Other Resources</a></li>
+            <li class="custom-list-item"><a class="custom-link" href="AboutUs.html">About Us</a></li>
+        </ul>
+        <div class="S1_Menu_img" onclick="toggleNav()">
+            <img src="Assets/Images/BurgBar.png" alt="Navigation Image" style="width: 50px; height: 40px;">
+        </div>
+    </nav>
+    
+    <div id="mySidenav" class="sidenav" style="display: block;">
+        <a href="Personalities.html">Personalities</a>
+        <a href="Type.html">Type</a>
+        <a href="Skills.html">Skills</a>
+        <a href="Preffer.html">Preferred Builds</a>
+        <a href="Friends.html">Friends & Relations</a>
+        <a href="Conclusion.html">Conclusion</a>
+        <span class="close-button" onclick="closeNav()">&times;</span>
+    </div>
+    
+    <p class="Text01" id="Text01">
+        <span class="current-text">Choose a Personality to View</span>
+    </p>
+    
+    <div id="additionalImage" class="selectedImage">
+        <img src="" alt="Additional Image">
+    </div>
+
+    <div class="Personality" data-personality="Architect">
+        <a href="Type.html?selectedImage=Assets/Images/Archi.png">
+            <div class="PersonalityImage Architect">
+                <img src="Assets/Images/Archi.png" alt="Hover Image" style="width: 132px; height: 154px;">
+            </div>
+        </a>
+    </div>
+
+    <div class="Personality" data-personality="Adventurer">
+        <a href="Type.html?selectedImage=Assets/Images/Adve.png">
+            <div class="PersonalityImage Adventurer">
+                <img src="Assets/Images/Adve.png" alt="Hover Image" style="width: 132px; height: 154px;">
+            </div>
+        </a>
+    </div>
+
+    <div class="Personality" data-personality="Advocate">
+        <a href="Type.html?selectedImage=Assets/Images/Advo.png">
+            <div class="PersonalityImage Advocate">
+                <img src="Assets/Images/Advo.png" alt="Hover Image" style="width: 132px; height: 154px;">
+            </div>
+        </a>
+    </div>
+
+    <div class="Personality" data-personality="Logistian">
+        <a href="Type.html?selectedImage=Assets/Images/Logi.png">
+            <div class="PersonalityImage Logistian">
+                <img src="Assets/Images/Logi.png" alt="Hover Image" style="width: 132px; height: 154px;">
+            </div>
+        </a>
+    </div>
+
+    <div class="Personality" data-personality="Debater">
+        <a href="Type.html?selectedImage=Assets/Images/Deba.png">
+            <div class="PersonalityImage Debater">
+                <img src="Assets/Images/Deba.png" alt="Hover Image" style="width: 132px; height: 154px;">
+            </div>
+        </a>
+    </div>
+
+    <div class="Personality" data-personality="Entertainer">
+        <a href="Type.html?selectedImage=Assets/Images/Ente.png">
+            <div class="PersonalityImage Entertainer">
+                <img src="Assets/Images/Ente.png" alt="Hover Image" style="width: 132px; height: 154px;">
+            </div>
+        </a>
+    </div>
+    
+<div class="Personality" data-personality="Mediator">
+    <a href="Type.html?selectedImage=Assets/Images/Medi.png">
+        <div class="PersonalityImage Mediator">
+            <img src="Assets/Images/Medi.png" alt="Hover Image" style="width: 132px; height: 154px;">
+        </div>
+    </a>
+</div>
+
+<div class="Personality" data-personality="Defender">
+    <a href="Type.html?selectedImage=Assets/Images/Defe.png">
+        <div class="PersonalityImage Defender">
+            <img src="Assets/Images/Defe.png" alt="Hover Image" style="width: 132px; height: 154px;">
+        </div>
+    </a>
+</div>
+
+<div class="Personality" data-personality="Logician">
+    <a href="Type.html?selectedImage=Assets/Images/Logi2.png">
+        <div class="PersonalityImage Logician">
+            <img src="Assets/Images/Logi.png" alt="Hover Image" style="width: 132px; height: 154px;">
+        </div>    
+    </a>
+</div>
+
+<div class="Personality" data-personality="Entrepreneur">
+    <a href="Type.html?selectedImage=Assets/Images/Entr.png">
+        <div class="PersonalityImage Entrepreneur">
+            <img src="Assets/Images/Entr.png" alt="Hover Image" style="width: 132px; height: 154px;">
+        </div>    
+    </a>
+</div>
+
+<div class="Personality" data-personality="Protagonist">
+    <a href="Type.html?selectedImage=Assets/Images/Prot.png">
+        <div class="PersonalityImage Protagonist">
+            <img src="Assets/Images/Prot.png" alt="Hover Image" style="width: 132px; height: 154px;">
+        </div>    
+    </a>
+</div>
+
+<div class="Personality" data-personality="Executive">
+    <a href="Type.html?selectedImage=Assets/Images/Exec.png">
+        <div class="PersonalityImage Executive">
+            <img src="Assets/Images/Exec.png" alt="Hover Image" style="width: 132px; height: 154px;">
+        </div>    
+    </a>
+</div>
+
+<div class="Personality" data-personality="Commander">
+    <a href="Type.html?selectedImage=Assets/Images/Comm.png">
+        <div class="PersonalityImage Commander">
+            <img src="Assets/Images/Comm.png" alt="Hover Image" style="width: 132px; height: 154px;">
+        </div>
+    </a>
+</div>
+
+<div class="Personality" data-personality="Virtuoso">
+    <a href="Type.html?selectedImage=Assets/Images/Virt.png">
+        <div class="PersonalityImage Virtuoso">
+            <img src="Assets/Images/Virt.png" alt="Hover Image" style="width: 132px; height: 154px;">
+        </div>
+    </a>
+</div>
+
+<div class="Personality" data-personality="Campaigner">
+    <a href="Type.html?selectedImage=Assets/Images/Camp.png">
+        <div class="PersonalityImage Campaigner">
+            <img src="Assets/Images/Camp.png" alt="Hover Image" style="width: 132px; height: 154px;">
+        </div>
+    </a>
+</div>
+
+<div class="Personality" data-personality="Consul">
+    <a href="Type.html?selectedImage=Assets/Images/Cons.png">
+        <div class="PersonalityImage Consul">
+            <img src="Assets/Images/Cons.png" alt="Hover Image" style="width: 132px; height: 154px;">
+        </div>
+    </a>
+</div>
+
+    <script src="Personal.js"></script>
+    <script src="NavBear.js"></script>
+</body>
+</html>

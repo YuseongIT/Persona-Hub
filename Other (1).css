@@ -1,0 +1,67 @@
+.container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    position: relative;
+    width: 100%; /* Set container width to full width */
+    margin-bottom: 20px; /* Add some margin between containers */
+  }
+  
+  .image-box {
+    border-radius: 10px; /* Optional: adds rounded corners */
+  }
+  
+  .image {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #403F56;
+  }
+  
+  .container:hover .overlay {
+    opacity: 1;
+  }
+  
+  .text {
+    color: white;
+    font-size: 40px;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
+  .ThankYou{
+    color: white;
+    font-size: 40px;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .Clickthe{
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  /* Parallax background adjustment */
+  body {
+    background: url('Assets/Images/MainBackground.png') top center, #bfa9e4;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PersonaHub</title>
+    <link rel="stylesheet" href="Prefferer.css">
+    <link rel="stylesheet" href="NavBars.css">
+</head>
+
+<body style="background: url('Assets/Images/MainBackground.png') center top no-repeat, #bfa9e4;">
+
+    <nav class="custom-nav">
+        <div class="S2_Menu_img">
+            <a href="Index.html">
+                <img src="Assets/Images/NavHome_Logo.png" alt="Navigation Image" style="width: 100px; height: 60px;">
+            </a>
+        </div>
+        <ul class="custom-list">
+            <li class="custom-list-item"><a class="custom-link" href="Personalities.html">Personalities</a></li>
+            <li class="custom-list-item"><a class="custom-link" href="Article.html">Articles and Trends</a></li>
+            <li class="custom-list-item"><a class="custom-link" href="Other.html">Other Resources</a></li>
+            <li class="custom-list-item"><a class="custom-link" href="AboutUs.html">About Us</a></li>
+        </ul>
+        <div class="S1_Menu_img" onclick="toggleNav()">
+            <img src="Assets/Images/BurgBar.png" alt="Navigation Image" style="width: 50px; height: 40px;">
+        </div>
+    </nav>
+
+    <div id="mySidenav" class="sidenav" style="display: block;">
+        <a href="Personalities.html">Personalities</a>
+        <a href="Type.html">Type</a>
+        <a href="Skills.html">Skills</a>
+        <a href="Preffer.html">Preferred Builds</a>
+        <a href="Friends.html">Friends & Relations</a>
+        <a href="Conclusion.html">Conclusion</a>
+        <span class="close-button" onclick="closeNav()">&times;</span>
+    </div>
+
+    <script src="NavBear.js"></script>
+
+    <div id="selectedImage">
+        <img src="" alt="Selected Image">
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const queryString = window.location.search;
+            const urlParams = new URLSearchParams(queryString);
+            const selectedImageSrc = urlParams.get('selectedImage');
+
+            if (selectedImageSrc) {
+                const selectedImage = document.querySelector('#selectedImage img');
+                selectedImage.src = decodeURIComponent(selectedImageSrc);
+            } else {
+                console.error('No image selected.');
+            }
+
+            // Retrieve the selected image URL from local storage
+            const localSelectedImageSrc = localStorage.getItem('selectedImage');
+    
+            if (localSelectedImageSrc) {
+                // Set the source of the selected image
+                const selectedImage = document.querySelector('#selectedImage img');
+                selectedImage.src = localSelectedImageSrc;
+            } else {
+                console.error('No image selected.');
+            }
+
+            // Add event listener to navigate to Skills.html
+            document.getElementById('Select').addEventListener('click', function() {
+                window.location.href = 'Skills.html';
+            });
+        });
+    </script>
+
+    <a id="Select" href="Type.html"></a>
+
+    <div class="info">
+        <h1>Ideal Setup:</h1>
+        <ul id="strengths">
+            <li><img src="Assets/Images/Bal.png" class="strength-img" onclick="showInfo('strength1')"></li>
+            <li><img src="Assets/Images/Emp.png" class="strength-img" onclick="showInfo('strength2')"></li>
+            <li><img src="Assets/Images/ADA.png" class="strength-img" onclick="showInfo('strength3')"></li>
+            <li><img src="Assets/Images/Dyna.png" class="strength-img" onclick="showInfo('strength4')"></li>
+        </ul>
+        <div id="strength1-info" class="info-box hidden">
+            <b class="Stext">Balance</b>
+            <p class="Ftext">The concept of balancing healthy ambition with social fulfillment for happiness and fulfillment emphasizes the importance of maintaining a harmonious relationship between personal goals and social connections. Healthy ambition, rooted in genuine passion and a desire to make a positive impact, drives individuals towards growth and achievement in their careers. However, excessive ambition can lead to stress, burnout, and neglect of other crucial aspects of life like relationships and well-being.<br>By striking a balance between ambition and social connections, individuals can achieve success without sacrificing their mental and emotional well-being. This balance involves setting realistic goals, practicing effective time management, and prioritizing self-care. Recognizing the symptoms of burnout and implementing strategies to maintain a healthy relationship between ambition and social fulfillment can lead to achieving goals without compromising overall health and happiness.</p>
+        </div>
+        <div id="strength2-info" class="info-box hidden">
+            <b class="Stext">Empathy</b>
+            <p class="Ftext">Effective communication and empathy are essential for building trust and fostering a harmonious environment. Communicating with empathy involves actively listening to others, understanding their perspectives, and acknowledging their emotions. This approach helps to create a safe and supportive space where individuals feel heard and valued, leading to stronger relationships and more productive collaborations. Active Listening, Perspective-Taking, Emotional Intelligence, Emotional Intelligence, and Open-Mindedness. By incorporating these elements, individuals can create an environment of trust, respect, and understanding, leading to more effective communication, better conflict resolution, and stronger, more meaningful relationships.</p>
+        </div>
+        <div id="strength3-info" class="info-box hidden">
+            <b class="Stext">Adapting</b>
+            <p class="Ftext">Adaptability and open-mindedness are essential qualities for effectively working with diverse personalities. In today's dynamic work environments, individuals need to be able to adjust their communication styles, work habits, and problem-solving approaches to accommodate the unique needs and preferences of their colleagues.
+                Being adaptable means being flexible, resilient, and willing to step out of one's comfort zone. It involves being receptive to change, embracing new ideas, and finding creative solutions to challenges. Adaptable individuals are able to navigate ambiguity and uncertainty with ease, and they are often seen as valuable assets to their teams.
+                Open-mindedness, on the other hand, is about being receptive to diverse perspectives and opinions. It involves suspending judgment, actively listening to others, and considering alternative viewpoints. Open-minded individuals are curious, eager to learn, and able to see the world through different lenses. They are often able to generate innovative ideas and find common ground in complex situations.</p>
+        </div>
+        <div id="strength4-info" class="info-box hidden">
+            <b class="Stext">Problem-Solving and Teamwork</b>
+            <p class="Ftext">Effective problem-solving and teamwork are essential for navigating challenges and achieving success in any endeavor. Individuals who approach problems with a positive mindset, seeing them as opportunities for growth and improvement, are more likely to find innovative solutions. This involves trusting in one's own abilities and being willing to take calculated risks to tackle challenges head-on.
+                At the same time, recognizing when to seek help and collaborate with others is a sign of strength, not weakness. Effective teamwork requires individuals to communicate openly, share ideas, and work together towards a common goal. By leveraging the diverse skills and perspectives of team members, problems can be tackled more efficiently and creatively.</p>
+        </div>
+
+    </div>
+
+    <div class="Back">
+        <a href="Skills.html">
+            <img id="backButton" src="Assets/Images/BackButton_Logo.png" alt="Go Back">
+        </a>
+    </div>
+
+    <div class="Next">
+        <a href="Friends.html">
+            <img id="nextButton" src="Assets/Images/NextButton_Logo.png" alt="Go Next">
+        </a>
+    </div>
+    <script>
+function showInfo(id) {
+        var infoBoxes = document.querySelectorAll('.info-box'); 
+        infoBoxes.forEach(function(box) { 
+            box.style.display = "none"; 
+        });
+
+        var infoBox = document.getElementById(id + "-info"); 
+        if (infoBox.style.display === "none") {
+            infoBox.style.display = "block";
+        } else {
+            infoBox.style.display = "none";
+        }
+    }
+    function showInfo(id) {
+        var infoBox = document.getElementById(id + "-info");
+
+        var isVisible = window.getComputedStyle(infoBox).getPropertyValue("display") === "block";
+
+        var infoBoxes = document.querySelectorAll('.info-box');
+        infoBoxes.forEach(function(box) {
+            box.style.display = "none";
+        });
+
+        if (!isVisible) {
+            infoBox.style.display = "block";
+        }
+    }
+    </script>
+</body>
+</html>

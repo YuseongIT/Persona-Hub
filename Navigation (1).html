@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigator</title>
+    <style>
+        .S2_Menu_img {
+            cursor: pointer;
+            position: absolute; /* Position the image absolutely */
+            top: -5px; /* Align the image to the top */
+            left: 10px; /* Align the image to the left */
+            margin-top: 10px; /* Adjust top margin as needed */
+            z-index: 2; /* Ensure the image appears on top of other elements */
+        }
+
+        .S1_Menu_list {
+            display: none;
+            position: absolute;
+            top: 10%;
+            left: 5%; /* Adjusted to align with BurgBar */
+            transform: translateX(-50%) translateY(-10px);
+            background-color: #bfa9e4;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-top: none;
+            z-index: 1;
+            list-style-type: none;
+            margin: 0;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+
+        .S1_Menu_list_item a {
+            text-decoration: none;
+            color: #333;
+            font-size: 25px;
+            transition: color 0.3s, font-size 0.3s;
+        }
+
+        .S1_Menu_list_item:hover {
+            background-color: #040720;
+        }
+
+        .S1_Menu_list_item:hover a {
+            color: #ffffff;
+            font-size: 30px;
+        }
+
+        .S1_Menu_img {
+            cursor: pointer;
+            position: absolute;
+            top: 3px;
+            left: 94%;
+            margin-top: 10px;
+            z-index: 2;
+        }
+
+        .sidenav {
+            height: 100%;
+            width: 250px;
+            position: fixed;
+            z-index: 999; /* Ensure it appears above other elements */
+            top: 0;
+            right: 0; /* Adjusted to align with BurgBar */
+            background-color: #111;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+            display: none; /* Initially hide */
+        }
+
+        .sidenav a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 35px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+            position: relative; /* Add relative positioning */
+        }
+
+        /* Add box shadow on link hover */
+        .sidenav a:hover {
+            color: #f1f1f1;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Create background layer for link container */
+        .sidenav a::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: transparent;
+            transition: background-color 0.3s; /* Smooth transition */
+            z-index: -1; /* Place it behind the link text */
+        }
+
+        /* Change background color of link container on hover */
+        .sidenav a:hover::before {
+            background-color: #27242B;
+        }
+
+        @media screen and (max-height: 450px) {
+            .sidenav {padding-top: 15px;}
+            .sidenav a {font-size: 18px;}
+        }
+
+        .custom-nav {
+            background-color: #403F56;
+            width: 100vw; /* Use viewport width */
+            margin: 0; /* Remove default margin */
+            padding: 15px; /* Remove default padding */
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 999; /* Ensure it appears above other elements */
+        }
+
+        .custom-list {
+            list-style-type: none;
+            display: flex;
+            margin: 0;
+            padding: 0px;
+        }
+
+        .custom-list-item {
+            margin-right: 65px;
+            margin-left: 165px;
+        }
+
+        .custom-list-item:last-child {
+            margin-right: 0;
+        }
+
+        .custom-link {
+            text-decoration: none;
+            color: #fff;
+            font-size: 30px; /* Adjust font size as needed */
+            padding: 16px 15px; /* Adjust padding as needed */
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .custom-link:hover {
+            background-color: #5C2BAD;
+        }
+
+        .hidden-nav {
+            transform: translateY(-100%);
+        }
+        
+        #mySidenav {
+            width: 0;
+            position: fixed;
+            right: 0; /* Position on the right side */
+            top: 0; /* Align to the top */
+            height: 100%; /* Set height to cover the entire screen */
+            background-color: #704ca8;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+
+        .close-button {
+            font-size: 90px;
+            position: absolute;
+            top: -20px;
+            right: 20px;
+            cursor: pointer;
+            color: white;
+            z-index: 1; /* Ensure it appears above other content */
+        }
+
+        .close-button:hover {
+            color: red; /* Change color on hover if needed */
+        }
+
+    </style>
+</head>
+
+<body style="background: url('Assets/Images/MainBackground.png') center top no-repeat, #bfa9e4;">
+
+<nav class="custom-nav">
+    <div class="S2_Menu_img">
+        <a href="Home.html">
+            <img src="Assets/Images/NavHome_Logo.png" alt="Navigation Image" style="width: 100px; height: 60px;">
+        </a>
+    </div>
+    <ul class="custom-list">
+        <li class="custom-list-item"><a class="custom-link" href="Personalities.html">Personalities</a></li>
+        <li class="custom-list-item"><a class="custom-link" href="Article.html">Articles and Trends</a></li>
+        <li class="custom-list-item"><a class="custom-link" href="Other.html">Other Resources</a></li>
+        <li class="custom-list-item"><a class="custom-link" href="AboutUs.html">About Us</a></li>
+    </ul>
+    <div class="S1_Menu_img" onclick="toggleNav()">
+        <img src="Assets/Images/BurgBar.png" alt="Navigation Image" style="width: 50px; height: 40px;">
+    </div>
+</nav>
+
+<div id="mySidenav" class="sidenav" style="display: block;">
+    <a href="Personalities.html">Personalities</a>
+    <a href="Type.html">Type</a>
+    <a href="Skills.html">Skills</a>
+    <a href="Preffer.html">Preferred Builds</a>
+    <a href="Friends.html">Friends & Relations</a>
+    <a href="Conclusion.html">Conclusion</a>
+    <span class="close-button" onclick="closeNav()">&times;</span>
+</div>
+
+<script>
+    // Add code for hiding/showing the navigation bar on scroll
+    var lastScrollTop = 0;
+    window.addEventListener("scroll", function() {
+        var currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+        if (currentScroll > lastScrollTop) {
+            // Scrolling down
+            document.querySelector(".custom-nav").classList.add("hidden-nav");
+        } else {
+            // Scrolling up
+            document.querySelector(".custom-nav").classList.remove("hidden-nav");
+        }
+        lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // For Mobile or negative scrolling
+    }, false);
+
+    // Variable to track whether the navigation is open or closed
+    var isNavOpen = false;
+
+    // Function to toggle the side navigation
+    function toggleNav() {
+        console.log("Toggling navigation...");
+        if (isNavOpen) {
+            closeNav();
+        } else {
+            openNav();
+        }
+    }
+
+    // Add an event listener to the BurgBar to toggle the navigation
+    var burgBar = document.querySelector(".S1_Menu_img");
+    if (burgBar) {
+        burgBar.addEventListener("click", function() {
+            toggleNav();
+        });
+    }
+
+    // Function to open the side navigation
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+        document.getElementById("mySidenav").style.display = "block";
+        isNavOpen = true; // Update the state
+    }
+
+    // Function to close the side navigation
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("mySidenav").style.display = "none";
+        isNavOpen = false; // Update the state
+    }
+
+    // Add an event listener to the BurgBar to toggle the navigation
+    document.querySelector(".S1_Menu_img").addEventListener("click", function() {
+        toggleNav();
+    });
+</script>
+
+</body>
+</html>

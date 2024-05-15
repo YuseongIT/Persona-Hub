@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PersonaHub</title>
+    <link rel="stylesheet" href="Conclusion.css">
+    <link rel="stylesheet" href="NavBars.css">
+</head>
+
+<body style="background: url('Assets/Images/MainBackground.png') center top no-repeat, #bfa9e4;">
+
+    <nav class="custom-nav">
+        <div class="S2_Menu_img">
+            <a href="Index.html">
+                <img src="Assets/Images/NavHome_Logo.png" alt="Navigation Image" style="width: 100px; height: 60px;">
+            </a>
+        </div>
+        <ul class="custom-list">
+            <li class="custom-list-item"><a class="custom-link" href="Personalities.html">Personalities</a></li>
+            <li class="custom-list-item"><a class="custom-link" href="Article.html">Articles and Trends</a></li>
+            <li class="custom-list-item"><a class="custom-link" href="Other.html">Other Resources</a></li>
+            <li class="custom-list-item"><a class="custom-link" href="AboutUs.html">About Us</a></li>
+        </ul>
+        <div class="S1_Menu_img" onclick="toggleNav()">
+            <img src="Assets/Images/BurgBar.png" alt="Navigation Image" style="width: 50px; height: 40px;">
+        </div>
+    </nav>
+
+    <div id="mySidenav" class="sidenav" style="display: block;">
+        <a href="Personalities.html">Personalities</a>
+        <a href="Type.html">Type</a>
+        <a href="Skills.html">Skills</a>
+        <a href="Preffer.html">Preferred Builds</a>
+        <a href="Friends.html">Friends & Relations</a>
+        <a href="Conclusion.html">Conclusion</a>
+        <span class="close-button" onclick="closeNav()">&times;</span>
+    </div>
+
+    <script src="NavBear.js"></script>
+
+    <div id="selectedImage">
+        <img src="" alt="Selected Image">
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const queryString = window.location.search;
+            const urlParams = new URLSearchParams(queryString);
+            const selectedImageSrc = urlParams.get('selectedImage');
+
+            if (selectedImageSrc) {
+                const selectedImage = document.querySelector('#selectedImage img');
+                selectedImage.src = decodeURIComponent(selectedImageSrc);
+            } else {
+                console.error('No image selected.');
+            }
+
+            // Retrieve the selected image URL from local storage
+            const localSelectedImageSrc = localStorage.getItem('selectedImage');
+    
+            if (localSelectedImageSrc) {
+                // Set the source of the selected image
+                const selectedImage = document.querySelector('#selectedImage img');
+                selectedImage.src = localSelectedImageSrc;
+            } else {
+                console.error('No image selected.');
+            }
+
+            // Add event listener to navigate to Skills.html
+            document.getElementById('Select').addEventListener('click', function() {
+                window.location.href = 'Skills.html';
+            });
+        });
+    </script>
+
+    <a id="Select" href="Type.html"></a>
+
+    <p id="conclusion">Conclusion</p>
+
+    <div class="text-box">
+        <p class="Ftext">In exploring the dynamics of personality matchups, it becomes apparent that the intricacies of compatibility in relationships extend far beyond surface-level traits. Each individual's unique blend of characteristics, values, and communication styles plays a significant role in shaping the dynamics of their interactions with others.
+            Through the lens of personality types, we have observed how certain pairings can naturally complement each other, while others may present challenges due to contrasting preferences and approaches to life. For instance, introverted and extroverted personalities bring different strengths to a relationship, with introverts often valuing solitude and reflection, while extroverts thrive on social interaction and external stimulation.
+            Moreover, the importance of empathy, effective communication, and mutual understanding emerges as essential elements in fostering healthy and harmonious relationships. By recognizing and respecting each other's differences, individuals can navigate potential conflicts and bridge gaps in perspectives. This requires a willingness to listen, empathize, and communicate openly to build trust and connection.
+            While some personality matchups may be perceived as more challenging, it is crucial to acknowledge that with effort, patience, and a genuine commitment to growth, even seemingly incompatible pairs can find common ground and flourish. Embracing diversity, celebrating individual strengths, and cultivating a spirit of collaboration are key components in nurturing strong and fulfilling relationships.
+            In conclusion, the journey of exploring personality matchups offers valuable insights into the complexity of human connections and the transformative power of understanding, acceptance, and mutual support. By approaching relationships with curiosity, empathy, and a growth mindset, individuals can forge deep, meaningful bonds that enrich their lives, foster personal development, and cultivate a sense of shared purpose and fulfillment.</p>
+    </div>
+    
+
+    <div class="Back">
+        <a href="Friends.html">
+            <img id="backButton" src="Assets/Images/BackButton_Logo.png" alt="Go Back">
+        </a>
+    </div>
+
+    <div class="Next">
+        <a href="Other.html">
+            <img id="nextButton" src="Assets/Images/NextButton_Logo.png" alt="Go Next">
+        </a>
+    </div>
+
+</body>
+</html>

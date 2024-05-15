@@ -1,0 +1,109 @@
+
+body {
+    margin: 0;
+    font-family: 'Canva Sans', sans-serif;
+    background-color: #040720; 
+}
+
+.row {
+    display: flex;
+    justify-content: center; 
+    flex-wrap: wrap;
+    margin-top: 96px; 
+}
+
+.column {
+    flex: 0 0 417px; 
+    height: 250px; 
+    margin: 10px 84.5px; 
+    padding: 20px;
+    background-color: #27242B; 
+    color: #27242B; 
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+@media (max-width: 800px) {
+    .column {
+        flex: 0 0 calc(50% - 20px); 
+    }
+
+}
+
+.back-button {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+    background-color: transparent;
+    padding: 10px;
+    border: none; 
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 40px;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.back-button:hover {
+    background-color: white;
+    color: #403F56;
+}
+
+
+.bottomnav {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.circle {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #403F56;
+    margin: 0 10px;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    color: white;
+}
+
+.circle:hover::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #403F56;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 12px;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.circle::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #403F56;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 12px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
